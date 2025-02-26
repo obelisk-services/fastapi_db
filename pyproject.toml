@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "fastapi_db"
+version = "0.0.1"
+authors = [
+  { name="obelisk-services", email="info@obelisk-services.com" },
+]
+description = "Modulo para mantener una session unica en fastapi"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "sqlmodel"
+]
+[project.urls]
+Homepage = "https://github.com/obelisk-services/fastapi_db"
+Issues = "https://github.com/obelisk-services/fastapi_db/issues"
