@@ -17,8 +17,8 @@ bd_url = f"mysql+mysqlconnector://{db_user}:{db_password}@{db_server}/{db_name}?
 # pprint(db_name)
 # pprint(bd_url)
 # Create the engine
-connect_args ={'pool_recycle':1800, 'pool_pre_ping':True} # {"check_same_thread": False}
-engine = create_engine(bd_url, echo=True, connect_args=connect_args)
+connect_args ={} # {"check_same_thread": False}
+engine = create_engine(bd_url, echo=True, pool_recycle=3600, pool_pre_ping=True)
 
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
